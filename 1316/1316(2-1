@@ -1,0 +1,18 @@
+# 이전에 dictionary 사용해서 풀려고 했는데 잘 안 돼서 다른 방식으로도 풀어봤습니다
+
+T = int(input())
+wordtypes = []
+
+for _ in range(T):
+    word = input()
+    compact = []
+    for a in range(len(word)):
+        if (a < len(word)-1) and (word[a] != word[a+1]):
+            compact.append(word[a])
+        elif (a == len(word)-1):
+            compact.append(word[a])
+    if len(compact) == len(set(compact)):
+        wordtypes.append(True)
+    else:
+        wordtypes.append(False)
+print(wordtypes.count(True))

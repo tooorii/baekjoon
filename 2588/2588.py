@@ -1,0 +1,8 @@
+A, B = map(int, input().split())
+c = int(B/100)
+d = int((B - 100*c)/10)
+e = int(B - 100*c - 10*d)
+print(A*e)
+print(A*d)
+print(A*c)
+print(A*(100*c+10*d+e))
